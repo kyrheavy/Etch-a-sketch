@@ -1,0 +1,32 @@
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 2px;
+    width: 400px;
+    height: 400px;
+}
+
+.gridItem {
+    background-color: #ccc;
+    border: 1px solid #999;
+    height: 30px;
+    width: 30px;
+}
+
+.hovered{
+    background-color: orange;
+    border-color: burlywood;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.size {
+    width: 70px;
+    height: 30px;
+}
