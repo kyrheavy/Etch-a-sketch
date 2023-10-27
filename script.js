@@ -12,11 +12,25 @@ function createGrid(gridSize){
             const gridItem = document.createElement("div");
             gridItem.classList.add("gridItem");
             gridContainer.appendChild(gridItem);
+
+            gridItem.addEventListener("mouseenter", () => {
+                gridItem.style.backgroundColor = getRandomColor();
+            });
         }
     }
     
     addHoverEffect();
 };
+
+function getRandomColor() {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 
 function addHoverEffect(){
     const gridItem = document.querySelectorAll(".gridItem");
